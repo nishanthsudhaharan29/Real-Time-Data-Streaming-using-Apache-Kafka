@@ -73,8 +73,7 @@ KafkaSparkStreaming
 
 ### **1. Clone the Repository**
 ```
-git clone https://github.com/nishanthsudhaharan29/Real-time-User-Streaming-Pipeline.git
-cd Real-time-User-Streaming-Pipeline
+git clone https://github.com/nishanthsudhaharan29/Real-Time-Data-Streaming-using-Apache-Kafka.git
 ```
 ### **2. Start the Docker Environment**
 ```
