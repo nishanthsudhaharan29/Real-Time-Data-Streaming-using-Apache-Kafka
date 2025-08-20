@@ -68,8 +68,8 @@ The project automates the ingestion, transformation, streaming, and storage of r
 
 ## **Repository Structure**
 
-```bash
- Real-time-User-Streaming-Pipeline
+```
+KafkaSparkStreaming
 ├── dags/                  # Airflow DAG scripts
 ├── scripts/               # Spark, Kafka, entrypoint, and API producer scripts
 ├── airflow_build/         # Custom Airflow image setup
@@ -78,3 +78,82 @@ The project automates the ingestion, transformation, streaming, and storage of r
 ├── requirements.txt       # Python dependencies
 ├── architecture.png       # System architecture diagram
 └── README.md              # Project documentation
+```
+
+## **Step-by-Step Implementation**
+
+### **1. Clone the Repository**
+```
+git clone https://github.com/nishanthsudhaharan29/Real-time-User-Streaming-Pipeline.git
+cd Real-time-User-Streaming-Pipeline
+```
+### **2. Start the Docker Environment**
+```
+docker-compose up --build
+```
+This will start the following services:
+
+Zookeeper
+Kafka
+Schema Registry
+Control Center
+
+PostgreSQL
+Airflow Webserver
+Airflow Scheduler
+
+Spark Master
+Spark Worker
+
+Cassandra DB
+
+### **3. Access the Airflow UI**
+Open in your browser:
+http://localhost:8080
+
+username: admin
+password: admin
+
+### **4. Start the Airflow DAG**
+- Navigate to the Airflow dashboard.
+- Enable the DAG kafka_streaming. This starts sending messages to kafka.
+- Enable the DAG spark_stream. Airflow triggers the Spark job and begins streaming data from Kafka to Cassandra.
+
+### **5. Access the Confluent Control Center**
+Open in your browser:
+http://localhost:9021
+
+- Go to Topics -> user_records-> Mesages to see the incoming data
+  
+### **6. Verify Data in Cassandra**
+- Enter the cassandra container's interactive terminal
+
+```
+docker exec -it cassandra cqlsh -u cassandra -p cassandra localhost 9042
+```
+```
+USE worldwide_users;
+SELECT * FROM user_records LIMIT 10;
+```
+
+## **Future Enhancements**
+
+- Integrate Grafana + Prometheus for real-time monitoring
+- Add Avro/Protobuf message formats for optimized serialization
+- Implement S3/ADLS storage sink for long-term archival
+- Add Power BI or Tableau dashboards for advanced visualization
+
+## **Personal Learning Outcomes**
+Through this project, I gained hands-on experience in:
+
+- Building real-time streaming pipelines with Kafka and Spark
+- Managing streaming jobs
+- Using Airflow for orchestration
+- Handling schema evolution with Confluent tools
+- Working with Cassandra for distributed storage
+- Deploying containerized big data pipelines using Docker Compose
+
+## **Conclusion**
+This project provides a scalable, fault-tolerant, and real-time data streaming solution. It can be extended to multiple real-time use cases like IoT telemetry, Social Media Analytics, Log Monitoring, and Real-time Weather.
+
+
