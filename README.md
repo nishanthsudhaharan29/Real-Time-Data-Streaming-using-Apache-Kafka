@@ -1,7 +1,6 @@
-## Real-Time Data Streaming with Apache Airflow, Apache Kafka, and Apache Spark
+## Real-Time Data Streaming with Apache Kafka, Apache Spark, Airflow, and Cassandra
 ![System Architecture](./Architecture.PNG)
 
-# Real-Time User Data Streaming Pipeline with Kafka, Spark, Cassandra & Airflow
 
 This project demonstrates the implementation of a **real-time data streaming pipeline** using **Apache Kafka, Apache Spark, Apache Airflow, Cassandra, Docker, and Schema Registry**. It fetches live user data from an external API, processes it in real-time, and stores it in **Cassandra** for analytical and operational use. The solution follows a fully containerized architecture built using **Docker Compose**.
 
