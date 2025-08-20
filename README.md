@@ -84,19 +84,16 @@ docker-compose up --build
 ```
 This will start the following services:
 
-Zookeeper
-Kafka
-Schema Registry
-Control Center
-
-PostgreSQL
-Airflow Webserver
-Airflow Scheduler
-
-Spark Master
-Spark Worker
-
-Cassandra DB
+- Zookeeper
+- Kafka
+- Schema Registry
+- Control Center
+- PostgreSQL
+- Airflow Webserver
+- Airflow Scheduler
+- Spark Master
+- Spark Worker
+- Cassandra DB
 
 ### **3. Access the Airflow UI**
 Open in your browser:
