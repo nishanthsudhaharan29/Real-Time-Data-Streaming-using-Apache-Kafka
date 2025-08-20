@@ -13,6 +13,7 @@ This project demonstrates the implementation of a real-time data streaming pipel
 ## **Workflow Explanation**
 
 ### **1. Data Ingestion**
+https://randomuser.me/
 - Data is fetched from RandomUser API using a Python producer script.
 - The producer sends user data to the Kafka topic **`user_records`**.
 - Data is serialized as JSON string and encoded into bytes before sending.
