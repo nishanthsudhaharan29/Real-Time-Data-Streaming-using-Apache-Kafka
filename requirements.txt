@@ -1,0 +1,9 @@
+apache-airflow[postgres,kafka]==2.9.3 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.9.3/constraints-3.11.txt
+requests
+kafka-python
+pandas
+cassandra-driver
+pyspark==3.4.1
+apache-airflow-providers-apache-spark
+
+
