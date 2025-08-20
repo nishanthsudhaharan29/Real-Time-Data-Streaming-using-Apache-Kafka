@@ -105,6 +105,18 @@ password: admin
 
 ![](screenshots/2.png)
 
+### **4. Set up a Spark connection in Airflow**
+- Go to Admin -> Connections
+- Add a New Connection
+- Connection Id: kafka_spark_cassandra
+- Connection Type: Spark
+- Host: spark://spark-master
+- Port: 7077
+- Deploy mode: client
+- Spark binary: spark-submit
+
+![](screenshots/7.png)
+
 ### **4. Start the Airflow DAG**
 - Navigate to the Airflow dashboard.
 - Enable the DAG kafka_streaming. This starts sending messages to kafka.
