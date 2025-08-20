@@ -117,13 +117,13 @@ password: admin
 
 ![](screenshots/7.png)
 
-### **4. Start the Airflow DAG**
+### **5. Start the Airflow DAG**
 - Navigate to the Airflow dashboard.
 - Enable the DAG kafka_streaming. This starts sending messages to kafka.
 - Enable the DAG spark_stream. Airflow triggers the Spark job and begins streaming data from Kafka to Cassandra.
 ![](screenshots/3.png)
 
-### **5. Access the Confluent Control Center**
+### **6. Access the Confluent Control Center**
 
 ![](screenshots/4.png)
 
@@ -134,7 +134,7 @@ http://localhost:9021
 
 ![](screenshots/5.png)
   
-### **6. Verify Data in Cassandra**
+### **7. Verify Data in Cassandra**
 - Enter the cassandra container's interactive terminal
 
 ```
