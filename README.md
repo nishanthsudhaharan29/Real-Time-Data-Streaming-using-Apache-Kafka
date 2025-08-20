@@ -82,6 +82,7 @@ git clone https://github.com/nishanthsudhaharan29/Real-Time-Data-Streaming-using
 ```
 docker-compose up --build
 ```
+![](screenshots/1.png)
 This will start the following services:
 
 - Zookeeper
@@ -102,16 +103,24 @@ http://localhost:8080
 username: admin
 password: admin
 
+![](screenshots/2.png)
+
 ### **4. Start the Airflow DAG**
 - Navigate to the Airflow dashboard.
 - Enable the DAG kafka_streaming. This starts sending messages to kafka.
 - Enable the DAG spark_stream. Airflow triggers the Spark job and begins streaming data from Kafka to Cassandra.
+![](screenshots/3.png)
 
 ### **5. Access the Confluent Control Center**
+
+![](screenshots/4.png)
+
 Open in your browser:
 http://localhost:9021
 
 - Go to Topics -> user_records-> Mesages to see the incoming data
+
+![](screenshots/5.png)
   
 ### **6. Verify Data in Cassandra**
 - Enter the cassandra container's interactive terminal
@@ -123,6 +132,7 @@ docker exec -it cassandra cqlsh -u cassandra -p cassandra localhost 9042
 USE worldwide_users;
 SELECT * FROM user_records LIMIT 10;
 ```
+![](screenshots/6.png)
 
 ## **Future Enhancements**
 
