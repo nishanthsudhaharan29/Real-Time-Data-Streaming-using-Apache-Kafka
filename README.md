@@ -3,17 +3,6 @@
 
 This project demonstrates the implementation of a real-time data streaming pipeline using **Apache Kafka, Apache Spark, Apache Airflow, Cassandra, and Docker**. It fetches live user data from an external API, processes it in real-time, and stores it in Cassandra for analytical and operational use. The solution follows a fully containerized architecture built using **Docker Compose**.
 
----
-
-## **Project Overview**
-
-The project automates the ingestion, transformation, streaming, and storage of real-time user data using modern data engineering tools.
-
-- **Data Ingestion** → Fetches random user data from an API.
-- **Streaming Pipeline** → Uses Kafka for event streaming.
-- **Data Transformation** → Processes data using Apache Spark Structured Streaming.
-- **Data Storage** → Stores enriched data into Apache Cassandra for fast querying.
-- **Workflow Orchestration** → Apache Airflow manages end-to-end pipeline execution.
 
 ---
 
